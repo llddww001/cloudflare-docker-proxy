@@ -15,7 +15,7 @@ const routes = {
   ["ghcr." + CUSTOM_DOMAIN]: "https://ghcr.io",
   ["cloudsmith." + CUSTOM_DOMAIN]: "https://docker.cloudsmith.io",
   ["ecr." + CUSTOM_DOMAIN]: "https://public.ecr.aws",
-  ["youtube." + CUSTOM_DOMAIN]: "https://www.youtube.com",
+  ["hub." + CUSTOM_DOMAIN]: "https://hub.docker.com",
   ["github." + CUSTOM_DOMAIN]: "https://github.com",
   ["reddit." + CUSTOM_DOMAIN]: "https://www.reddit.com",
 
