@@ -39,7 +39,7 @@ async function handleRequest(request) {
   if (upstream === "") {
     return new Response(
       JSON.stringify({
-        routes: routes,
+        routes: "invalid access",
       }),
       {
         status: 404,
