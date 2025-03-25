@@ -22,7 +22,8 @@ const routes = {
 
 function routeByHosts(host) {
   if (host in routes) {
-    return routes[host];
+    //return routes[host];
+    return "invalid access"
   }
   if (MODE == "debug") {
     return TARGET_UPSTREAM;
