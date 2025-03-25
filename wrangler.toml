@@ -29,6 +29,7 @@ name = "business-docker-proxy"
 # ]
 
 [env.production.vars]
+CUSTOM_DOMAIN = "mwdocker.top"
 MODE = "production"
 TARGET_UPSTREAM = ""
 
