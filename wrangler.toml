@@ -10,6 +10,9 @@ local_protocol = "http"
 
 [env.vars]
 CUSTOM_DOMAIN = "libcuda.so"
+SUB_DOMAIN = "docker"
+MODE = "production"
+TARGET_UPSTREAM = ""
 
 [env.dev.vars]
 MODE = "debug"
@@ -18,10 +21,6 @@ CUSTOM_DOMAIN = "exmaple.com"
 
 [env.production]
 name = "cloudflare-docker-proxy"
-MODE = "production"
-TARGET_UPSTREAM = ""
-CUSTOM_DOMAIN = "exmaple.com"
-
 # routes = [
 #   { pattern = "docker.libcuda.so", custom_domain = true },
 #   { pattern = "quay.libcuda.so", custom_domain = true },
