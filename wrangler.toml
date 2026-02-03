@@ -1,5 +1,7 @@
 name = 'docker-proxy-pull-private'
 compatibility_date = "2023-12-01"
+# pages_build_output_dir = "pages" 
+main = "src/index.js"
 
 [dev]
 ip = "0.0.0.0"
