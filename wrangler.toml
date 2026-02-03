@@ -10,7 +10,6 @@ local_protocol = "http"
 
 [env.vars]
 CUSTOM_DOMAIN = "libcuda.so"
-SUB_DOMAIN = "docker"
 MODE = "production"
 TARGET_UPSTREAM = ""
 
