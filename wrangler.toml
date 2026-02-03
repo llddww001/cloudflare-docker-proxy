@@ -1,4 +1,4 @@
-name = 'docker-proxy-pull-private'
+name = 'cloudflare-docker-proxy'
 compatibility_date = "2023-12-01"
 # pages_build_output_dir = "pages" 
 main = "src/index.js"
@@ -31,6 +31,7 @@ name = "cloudflare-docker-proxy"
 [env.production.vars]
 MODE = "production"
 TARGET_UPSTREAM = ""
+CUSTOM_DOMAIN = "exmaple.com"
 
 [env.staging]
 name = "cloudflare-docker-proxy-staging"
