@@ -7,24 +7,24 @@ const dockerHub = "https://registry-1.docker.io";
 
 const routes = {
   // production
-  ["docker." + env.CUSTOM_DOMAIN]: dockerHub,
-  ["quay." + env.CUSTOM_DOMAIN]: "https://quay.io",
-  ["gcr." + env.CUSTOM_DOMAIN]: "https://gcr.io",
-  ["k8s-gcr." + env.CUSTOM_DOMAIN]: "https://k8s.gcr.io",
-  ["k8s." + env.CUSTOM_DOMAIN]: "https://registry.k8s.io",
-  ["ghcr." + env.CUSTOM_DOMAIN]: "https://ghcr.io",
-  ["cloudsmith." + env.CUSTOM_DOMAIN]: "https://docker.cloudsmith.io",
-  ["ecr." + env.CUSTOM_DOMAIN]: "https://public.ecr.aws",
+  ["docker." + CUSTOM_DOMAIN]: dockerHub,
+  ["quay." + CUSTOM_DOMAIN]: "https://quay.io",
+  ["gcr." + CUSTOM_DOMAIN]: "https://gcr.io",
+  ["k8s-gcr." + CUSTOM_DOMAIN]: "https://k8s.gcr.io",
+  ["k8s." + CUSTOM_DOMAIN]: "https://registry.k8s.io",
+  ["ghcr." + CUSTOM_DOMAIN]: "https://ghcr.io",
+  ["cloudsmith." + CUSTOM_DOMAIN]: "https://docker.cloudsmith.io",
+  ["ecr." + CUSTOM_DOMAIN]: "https://public.ecr.aws",
 
   // staging
-  ["docker-staging." + env.CUSTOM_DOMAIN]: dockerHub,
+  ["docker-staging." + CUSTOM_DOMAIN]: dockerHub,
 };
 
 function routeByHosts(host) {
   if (host in routes) {
     return routes[host];
   }
-  if (env.MODE == "debug") {
+  if (MODE == "debug") {
     return TARGET_UPSTREAM;
   }
   return "";
@@ -155,7 +155,7 @@ async function fetchToken(wwwAuthenticate, scope, authorization) {
 
 function responseUnauthorized(url) {
   const headers = new(Headers);
-  if (env.MODE == "debug") {
+  if (MODE == "debug") {
     headers.set(
       "Www-Authenticate",
       `Bearer realm="http://${url.host}/v2/auth",service="cloudflare-docker-proxy"`
