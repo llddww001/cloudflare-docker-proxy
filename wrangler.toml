@@ -10,6 +10,7 @@ local_protocol = "http"
 
 [env.vars]
 CUSTOM_DOMAIN = "libcuda.so"
+SUB_DOMAIN = "docker"
 
 [env.dev.vars]
 MODE = "debug"
@@ -32,6 +33,7 @@ name = "cloudflare-docker-proxy"
 MODE = "production"
 TARGET_UPSTREAM = ""
 CUSTOM_DOMAIN = ""
+SUB_DOMAIN = "docker"
 
 [env.staging]
 name = "cloudflare-docker-proxy-staging"
