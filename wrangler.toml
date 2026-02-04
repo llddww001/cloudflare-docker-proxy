@@ -15,7 +15,7 @@ SUB_DOMAIN = "docker"
 [env.dev.vars]
 MODE = "debug"
 TARGET_UPSTREAM = "https://registry-1.docker.io"
-CUSTOM_DOMAIN = "exmaple.com"
+CUSTOM_DOMAIN = "20160928.xyz"
 
 [env.production]
 name = "cloudflare-docker-proxy"
@@ -32,7 +32,7 @@ name = "cloudflare-docker-proxy"
 [env.production.vars]
 MODE = "production"
 TARGET_UPSTREAM = ""
-CUSTOM_DOMAIN = ""
+CUSTOM_DOMAIN = "20160928.xyz"
 SUB_DOMAIN = "docker"
 
 [env.staging]
